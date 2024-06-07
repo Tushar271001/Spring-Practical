@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       ">
+    <context:annotation-config/>
+    <bean class="com.maven.entities.Student" name="student">
+        <property name="id" >
+            <value type="int">1</value>
+        </property>
+        <property name="firstName" value="Tushar"/>
+        <property name="lastName" value="Yadav"/>
+        <property name="age" >
+            <value type="int">23</value>
+        </property>
+        <property name="email" value="tytushar27@gmail.com"/>
+        <property name="contact" value="9595143472"/>
+    </bean>
+
+<!--    <bean class="com.maven.entities.Address" >-->
+<!--        <property name="city" value="kolhapur"/>-->
+<!--        <property name="state" value="Maharashtra"/>-->
+<!--        <property name="country" value="India"/>-->
+<!--        <property name="pinCode" value="416234"/>-->
+<!--    </bean>-->
+
+<!--    <bean class="com.maven.entities.Address" >-->
+<!--        <property name="city" value="kagal"/>-->
+<!--        <property name="state" value="Maharashtra"/>-->
+<!--        <property name="country" value="India"/>-->
+<!--        <property name="pinCode" value="416233"/>-->
+<!--    </bean>-->
+
+</beans>
