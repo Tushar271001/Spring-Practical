@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 @Component
+
 public class UserController {
     @Autowired
     private UserService userService;
