@@ -17,7 +17,7 @@ public interface UserService {
 
   User selectSingleUser(Long id);
 
-  Boolean checkUserbyContact(User user);
+  Boolean isUserExits(User user);
 }
 
 

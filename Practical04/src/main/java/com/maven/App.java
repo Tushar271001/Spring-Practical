@@ -45,7 +45,8 @@ public class App
                     user.setUserCity(x.nextLine());
                     System.out.println("Enter User Contact");
                     user.setUserContact(x.nextLine());
-                    if (userController.isUserExits(user)){
+                    System.out.println(userController.isUserExits(user));
+                    if (!userController.isUserExits(user)){
                         System.out.println("USER ALREADY EXITS");
                     }
                     else{

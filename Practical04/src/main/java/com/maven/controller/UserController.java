@@ -5,7 +5,6 @@ import com.maven.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.sql.SQLException;
 import java.util.List;
 
 @Component
@@ -16,9 +15,10 @@ public class UserController {
 
     public int addUser(User user){
 //        User user=new User();
-//        user.setUserName("Sanket Ilkae");
-//        user.setUserContact("7057891106");
-//        user.setUserCity("Nipani");
+//        user.setUserID(101L);
+//        user.setUserName("Tushar Yadav");
+//        user.setUserContact("9595143472");
+//        user.setUserCity("KOlhapur");
         return userService.createUser(user);
     }
 
@@ -44,7 +44,7 @@ public class UserController {
     }
 
     public boolean isUserExits(User user)  {
-        return userService.checkUserbyContact(user);
+        return userService.isUserExits(user);
     }
 
 }

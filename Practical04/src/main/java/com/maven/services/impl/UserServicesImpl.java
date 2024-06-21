@@ -16,7 +16,7 @@ public class UserServicesImpl implements UserService {
 
     public int createUser(User user) {
         String query= "insert into userinfo (userID,userName,userContact,userCity)values(?,?,?,?)";
-        return jdbcTemplate.update(query, user.getUserID(),user.getUserName(),user.getUserCity(),user.getUserContact());
+        return jdbcTemplate.update(query, user.getUserID(),user.getUserName(),user.getUserContact(),user.getUserCity());
     }
 
     @Override
@@ -45,7 +45,7 @@ public class UserServicesImpl implements UserService {
     }
 
     @Override
-    public Boolean checkUserbyContact(User user) {
+    public Boolean isUserExits(User user) {
         String query = "SELECT * FROM userinfo WHERE  userContact = ?";
         RowMapperImpl row = new RowMapperImpl();
         try {
