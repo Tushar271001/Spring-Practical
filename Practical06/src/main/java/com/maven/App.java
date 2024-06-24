@@ -30,8 +30,11 @@ public class App
 //        address.setPinCode("416234");
 //        studentController.addStudent(student);
 //        studentController.addAdress(address);
+        //------select single student by its address id---//
+//        Address address=new Address();
+//        studentController.selectStudent(address);
 
-        Address address=new Address();
-        studentController.selectStudent(address);
+          //------select single student by its Student  id---//
+        System.out.println(studentController.selectStudent());
     }
 }

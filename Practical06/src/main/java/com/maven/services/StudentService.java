@@ -9,5 +9,7 @@ import java.io.Serializable;
 public interface StudentService {
     Serializable addStudent (Student student);
 
+    Student selectStudent (Student student);
+
 
 }

@@ -19,5 +19,11 @@ public class StudentServiceImpl implements StudentService {
       return hibernateTemplate.save(student);
    }
 
+   @Override
+   public Student selectStudent(Student student) {
+      return hibernateTemplate.get(Student.class, student.getStudentID());
+
+   }
+
 
 }

@@ -1,10 +1,10 @@
 package com.maven.entities;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+
 
 @Component
 @Data
@@ -21,5 +21,6 @@ public class Student {
     private  String studentEMail;
     @Column(length = 10)
     private  String studentContact;
-
+    @OneToOne(mappedBy = "student")
+    private Address address;
 }

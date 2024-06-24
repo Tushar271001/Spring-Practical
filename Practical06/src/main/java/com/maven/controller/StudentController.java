@@ -30,4 +30,10 @@ public class StudentController {
         addressService.selectAddress(address);
         return address;
     }
+    public Student selectStudent (){
+        Student student=new Student();
+        student.setStudentID(1L);
+        Student student1 = studentService.selectStudent(student);
+        return student1;
+    }
 }
