@@ -1,6 +1,8 @@
 package com.maven.entities;
 
 import lombok.Data;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
@@ -18,7 +20,11 @@ public class User {
     private String userContact;
     private String userEmail;
     private String userAddress;
-    @OneToMany
+    @OneToMany(mappedBy ="user",
+            fetch = FetchType.EAGER,
+            cascade = CascadeType.REMOVE,
+            orphanRemoval = true)
+//    @Fetch(FetchMode.SELECT)
     private List<Order> order;
 
 }

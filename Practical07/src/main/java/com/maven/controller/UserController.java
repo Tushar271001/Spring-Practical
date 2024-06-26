@@ -11,6 +11,8 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 
 public class UserController {
@@ -44,5 +46,15 @@ public class UserController {
        product.setProductID(1L);
        Products products=productService.selectProduct(product);
        return products;
+   }
+
+   public List<User> selectAllUser(User user){
+       return userService.selectAllUser(user);
+   }
+   public void deleteUser (){
+       User u=new User();
+       u.setUserID(1L);
+       User user = userService.selectUser(u);
+       userService.deleteUser(user);
    }
 }

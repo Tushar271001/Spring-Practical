@@ -1,6 +1,7 @@
 package com.maven.entities;
 
 import lombok.Data;
+import lombok.ToString;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ public class Products {
     private String productName;
     private String productPrice;
     private String productQuantity;
-    @ManyToMany
+    @ManyToMany(mappedBy = "products", cascade = CascadeType.REMOVE)
+    @ToString.Exclude
     private List<Order> order;
 }

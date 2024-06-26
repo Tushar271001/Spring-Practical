@@ -1,6 +1,7 @@
 package com.maven.entities;
 
 import lombok.Data;
+import lombok.ToString;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
@@ -15,8 +16,9 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderID;
     @ManyToOne
+    @ToString.Exclude
     private User user;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Products> products;
 
 }
